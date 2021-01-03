@@ -2,5 +2,7 @@
 layout: layouts/base.njk 
 ---
 <h2>{{ title }}</h2>
+<h3>Tags: {{ tags }}</h3>
+<h3>Date: {{ date }}</h3>
 <img src="{{ featuredImage | url }}" alt="{{ featuredImage }}"></img>
 <p>{{ content | safe }}</p>

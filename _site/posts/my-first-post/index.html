@@ -1,6 +1,10 @@
 <html>
     <head>
         <title>Eleventy + Netlify CMS Blog Example</title>
+
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+
     </head>
 
     <body>
@@ -8,8 +12,35 @@
             Eleventy + Netlify CMS Blog Example
         </h1>
         <h2>My first post</h2>
+<h3>Tags: posts,cat,dog</h3>
+<h3>Date: Thu Oct 08 2020 01:00:00 GMT+0100 (British Summer Time)</h3>
 <img src="/images/uploads/image1.png" alt="/images/uploads/image1.png"></img>
-<p><p>Hello, here is the body of the post.</p>
+<p><h2>tags</h2>
+<p>Trying to understand the way the <code>posts</code> folder is processed from input to output.</p>
+<p>The <code>posts.json</code> file seems to be adding <code>&quot;tags: posts&quot;</code> to every post so that a collection of &quot;tags: posts&quot; can be used to create a list of posts.</p>
+<p>This was confirmed by adding displays of front matter to each post, using the layout post.njk.</p>
+<p><code>tags</code>, as well as <code>date</code>, are now displayed when a post in the post list is clicked.</p>
+<p>Other front matter can also be shown... [TODO]</p>
+<p>How to create a list of clickable unique tags... [TODO]</p>
+<p>But, when adding tags to the front matter directly, the <code>posts</code> tag no longer appeared, and the post was absent from the posts list.</p>
+<h2>searching</h2>
+<p>Just to note that this search was successful, and the results are understandable.</p>
+<p><a href="https://github.com/11ty/eleventy/issues/401">Merge tags when defined in multiple places</a></p>
+<p><a href="https://www.11ty.dev/docs/quicktips/tag-pages/">QUICK TIP #004—ZERO MAINTENANCE TAG PAGES FOR YOUR BLOG</a></p>
+<p><a href="https://www.11ty.dev/docs/config/#data-deep-merge">Data Deep Merge</a></p>
+<p><a href="https://www.11ty.dev/docs/data-deep-merge/">Using data | Data cascade | data deep merge</a></p>
+<p><a href="https://github.com/11ty/eleventy/issues/147">Frontmatter properties replace those in .json files rather than supplementing</a></p>
+<h2>Solving the problem</h2>
+<p>The <code>dot eleventy dot js</code> file was updated with the configuration change and the tags are now merged. Need to look out for when this approach is part of the mainline and the config change is not needed.</p>
+<h2>in passing</h2>
+<p><a href="https://11tytips.netlify.app/">eleventy tips</a></p>
+<p><a href="https://github.com/11ty/eleventy-community/issues/4#issuecomment-597866277">importing json using curl</a></p>
+<p><a href="https://www.11ty.dev/docs/data-global/">more on eleventy data</a></p>
+<p><a href="https://github.com/11ty/eleventy/issues/927">Collection of tags</a></p>
+<p><a href="https://www.11ty.dev/docs/collections/">Collections (using tags)</a></p>
+<h2>netlify status</h2>
+<p><a href="https://app.netlify.com/sites/fomf-22/settings/general#status-badges">Netlify status badge for success, building or failed</a></p>
+<p><a href="https://app.netlify.com/sites/fomf-22/deploys"><img src="https://api.netlify.com/api/v1/badges/5b4f71ff-b884-40ac-b4f0-d4067c1f8067/deploy-status" alt="Netlify Status"></a></p>
 </p>
     </body>
 </html>
