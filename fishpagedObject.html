@@ -1,0 +1,17 @@
+---
+title: Fish Paged Object
+pagination:
+    data: fishListObject.fish
+    size: 6
+
+note: Eleventy &bull; Pagination &bull; split a json data object into multiple pages 
+---
+<h1>{{ title }}</h1>
+
+<ul>
+    {% for fish in pagination.items -%}
+        <li>{{ fish }}</li>
+    {% endfor -%}
+</ul>
+
+{{ note }}

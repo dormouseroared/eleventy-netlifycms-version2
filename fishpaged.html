@@ -1,0 +1,13 @@
+---
+title: Fish Paged
+pagination:
+    data: fishList
+    size: 4
+---
+<h1>{{ title }}</h1>
+
+<ul>
+    {% for fish in pagination.items -%}
+        <li>{{ fish }}</li>
+    {% endfor -%}
+</ul>

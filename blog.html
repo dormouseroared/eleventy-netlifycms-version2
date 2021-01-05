@@ -1,0 +1,10 @@
+---
+title: "BLOG LIST"
+layout: "layouts/base.njk"
+---
+## Blog posts
+<ul>
+{% for blog in collections.blogs %}
+    <li><a href="{{ blog.url }}">{{ blog.data.title }}</a></li>
+{% endfor %}
+</ul>

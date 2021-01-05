@@ -1,0 +1,22 @@
+---
+pagination:
+    data: possums
+    size: 1
+    alias: possum
+permalink: "possums/{{ possum.name | slug }}/"
+tags: ["alias", "slug"]
+source: https://www.11ty.dev/docs/pages-from-data/
+notes: Another way to use pagination. Here data is turned into one page per possum.
+---
+
+{{ possum.name }} the possum is {{ possum.age }} years old
+
+
+
+
+
+<hr>
+<br>
+{{ notes }}
+<br>
+<a href="{{ source }}">Source</a>

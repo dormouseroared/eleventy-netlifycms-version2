@@ -16,3 +16,15 @@ permalink: /
 <br>
 <a href = "https://www.11ty.dev/docs/plugins/">Eleventy Plugins | Navigation, Menu...</a>
 
+<h2>links to everything as per collections.all</h2>
+
+<ul>
+    <li><a href="https://www.11ty.dev/docs/collections/">Eleventy | Docs | Collections</a></li>
+    <li><a href="https://www.11ty.dev/docs/collections/#option-exclude-content-from-collections">Eleventy | Docs | Collections | Exclude content from collections</a></li>
+</ul>
+
+<ul>
+{%- for everything in collections.all -%}
+  <li><a href="{{ everything.url }}">{{ everything.url }}</a></li>
+{%- endfor -%}
+</ul>
